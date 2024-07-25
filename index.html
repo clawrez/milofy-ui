@@ -1,11 +1,75 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/75e0c3f604.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
     <title>Milofy</title>
 </head>
+
 <body>
-    
+    <div id="app">
+        <div id="top-section">
+
+        </div>
+        <div id="bottom-section">
+            <!-- progress bar, media controls, other buttons -->
+            <div id="music-info-container">
+                <div id="music-info-left">
+                    <div id="info-song-cover-container">
+                        <img id="info-song-cover" src="img/placeholderS.png">
+                    </div>
+                </div>
+                <div id="music-info-right">
+                    <div id="info-song-title">
+                        The Song of Ever
+                    </div>
+                    <div id="info-song-artists">
+                        Clawrez, kevlar, ZiKK
+                    </div>
+                </div>
+            </div>
+            <div id="media-controls-container">
+                <div id="progress-bar-container">
+                    <div class="progress-time" id="progress-start-time">1:26</div>
+                    <div id="progress-bar">
+                        <div id="progress">
+
+                        </div>
+                    </div>
+                    <div class="progress-time" id="progress-end-time">2:52</div>
+                </div>
+                <div id="media-buttons">
+                    <div class="media-button">-10s</div>
+                    <i class="fa-solid fa-rotate-right media-button"></i>
+                    <i class="fa-solid fa-backward media-button"></i>
+                    <i class="fa-solid fa-play media-button" id="play-pause-button"></i>
+                    <i class="fa-solid fa-forward media-button"></i>
+                    <i class="fa-solid fa-shuffle media-button"></i>
+                    <div class="media-button">+10s</div>
+                </div>
+            </div>
+            <div id="other-functions-container">
+                <div id="other-function-buttons">
+                    <i class="fa-solid fa-bars other-function-button"></i>
+                    <i class="fa-solid fa-circle-plus other-function-button"></i>
+                    <i class="fa-solid fa-sliders other-function-button"></i>
+                </div>
+                <div id="volume-container">
+                    <i class="fa-solid fa-volume-low other-function-button""></i>
+                    <div id="volume-bar">
+                        <div id="volume-progress">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
