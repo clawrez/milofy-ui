@@ -14,7 +14,93 @@
 <body>
     <div id="app">
         <div id="top-section">
+            <div id="library-side-bar">
+                <div class="library-item" id="library-all">
+                    All Tracks
+                </div>
+                <div class="library-item" id="library-clawrez">
+                    Liked Tracks
+                </div>
+                <div class="library-item" id="library-clawrez">
+                    Clawrez
+                </div>
+                <div class="library-item" id="library-clawrez">
+                    kevlar
+                </div>
+                <div class="library-item" id="library-clawrez">
+                    ZiKK
+                </div>
+            </div>
+            <div class="menu" id="music-displayer">
+                <div id="displaying-artist">
+                    All Tracks
+                </div>
+                <div id="list-guide-container">
+                    <div class="song-list-item" id="initial-list-item">
+                        <div>
+                            <div class="song-list-cover"> </div>
+                        </div>
+                        <div class="song-list-first-column">
+                            <div class="song-list-title">
+                                Title/Artists
+                            </div>
+                        </div>
+                        <div class="song-list-album">
+                            Album
+                        </div>
+                        <div class="song-list-genre">
+                            Genre
+                        </div>
+                        <div class="song-list-release-date">
+                            Release Date
+                        </div>
+                        <div class="song-list-buttons">
+                            <i class="song-list-button"></i>
+                            <i class="song-list-button"></i>
+                            <i class="song-list-button"></i>
+                        </div>
+                    </div>
+                </div>
+                <div id="song-list">
+                    
+                    <div class="song-list-item">
+                        <div>
+                            <img class="song-list-cover" src="img/placeholderS.png">
+                        </div>
+                        <div class="song-list-first-column">
+                            <div class="song-list-title">
+                                The Song of Ever
+                            </div>
+                            <div class="song-list-artists">
+                                Clawrez, kevlar, ZiKK
+                            </div>
+                        </div>
+                        <div class="song-list-album">
+                            The Album in Time
+                        </div>
+                        <div class="song-list-genre">
+                            Hardstyle
+                        </div>
+                        <div class="song-list-release-date">
+                            Jan 19, 2024
+                        </div>
+                        <div class="song-list-buttons">
+                            <i class="fa-solid fa-heart song-list-button"></i>
+                            <i class="fa-solid fa-indent song-list-button"></i>
+                            <i class="fa-solid fa-circle-info song-list-button"></i>
+                        </div>
+                    </div>
+                </div>
+                <div id="stupid-pillow">
+                    
+                </div>
+            </div>
+            <div class="menu hidden" id="artist-page">
 
+            </div>
+            <div class="menu hidden" id="album-page">
+
+            </div>
         </div>
         <div id="bottom-section">
             <!-- progress bar, media controls, other buttons -->
@@ -55,9 +141,9 @@
             </div>
             <div id="other-functions-container">
                 <div id="other-function-buttons">
+                    <i class="fa-solid fa-heart other-function-button"></i>
                     <i class="fa-solid fa-bars other-function-button"></i>
-                    <i class="fa-solid fa-circle-plus other-function-button"></i>
-                    <i class="fa-solid fa-sliders other-function-button"></i>
+                    <i class="fa-solid fa-circle-info song-list-button"></i>
                 </div>
                 <div id="volume-container">
                     <i class="fa-solid fa-volume-low other-function-button""></i>
@@ -65,11 +151,14 @@
                         <div id="volume-progress">
 
                         </div>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
+    </div>
+    <script src="js/data.js"></script>
+    <script src="js/musicdisplay.js"></script>
+    <script>displayArtist(`all`)</script>
 </body>
 
 </html>

@@ -9,11 +9,17 @@ body {
     color: white;
     font-family: "Inter";
     font-size: 14px;
+    overflow-y: hidden;
+    scrollbar-width: 0;
 }
 
 img {
     object-fit: contain;
 }
+
+/* ::-webkit-scrollbar {
+    width: 0;
+} */
 
 #app {
     display: flex;
@@ -21,11 +27,166 @@ img {
 }
 
 #top-section {
-    /* height: 100px; */
+    display: grid;
+    grid-template-columns: 20% 80%;
+    height: 100vh;
+}
+
+#library-side-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #151515;
+    border-right: 1px solid #333;
+    padding: 24px;
+    padding-top: 12px;
+}
+
+.library-item {
+    width: 100%;
+    background-color: #333;
+    border-radius: 16px;
+    height: 100px;
+    margin-top: 12px;
+    padding: 12px;
+    display: flex;
+    font-size: 42px;
+    align-items: end;
+    line-height: 36px;
+    font-weight: 800;
+}
+
+.library-item:first-child {
+    margin-top: 0;
+}
+
+#displaying-artist {
+    font-size: 64px;
+    font-weight: 600;
+    padding: 16px;
+    line-height: 64px;
+}
+
+#song-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+#list-guide-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+}
+
+#stupid-pillow {
+    height: 84px;
+    width: 100%;
+}
+
+.song-list-item {
+    width: 98%;
+    height: 72px;
+    background-color: #151515;
+    display: flex;
+    margin-top: 6px;
+    border-radius: 10px;
+    transition: background-color 0.1s;
+    display: flex;
+    align-items: center;
+}
+
+#initial-list-item {
+    height: 32px;
+    color: #aaa;
+    background: none;
+    border-radius: 0;
+    border-bottom: 1px solid #333;
+    margin-bottom: 8px;
+}
+
+.song-list-item:hover {
+    background-color: #1c1c1c;
+}
+
+.song-list-item:first-child {
+    margin-top: 0;
+}
+
+.song-list-cover {
+    width: 56px;
+    height: 56px;
+    margin-left: 8px;
+    border-radius: 8px;
+}
+
+.song-list-first-column {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    margin-left: 12px;
+}
+
+.song-list-artists {
+    color: #aaa;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.song-list-album {
+    width: 350px;
+    color: #aaa;
+
+}
+
+.song-list-genre {
+    width: 200px;
+    color: #aaa;
+
+}
+
+.song-list-release-date {
+    width: 200px;
+    color: #aaa;
+}
+
+.song-list-buttons {
+    display: flex;
+    margin-left: auto;
+}
+
+.song-list-button {
+    color: #aaa;
+    width: 24px;
+    height: 24px;
+    font-size: 18px;
+    margin-left: 4px;
+    margin-right: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: background-color 0.1s, color 0.1s, transform 0.1s;
+}
+
+.song-list-button:last-child {
+    margin-right: 16px;
+}
+
+.song-list-button:hover {
+    color: #888;
+}
+
+.song-list-button:active {
+    transform: scale(90%);
 }
 
 #bottom-section {
-    position: absolute;
+    border-top: 1px solid #333;
+    position: fixed;
+    left: 0;
     bottom: 0;
     width: 100%;
     height: 84px;
@@ -109,7 +270,7 @@ img {
     align-items: center;
     justify-content: center;
     text-align: center;
-    transition: background-color 0.1s, color 0.1s;
+    transition: background-color 0.1s, color 0.1s, transform 0.1s;
 }
 
 div.media-button {
@@ -127,6 +288,10 @@ div.media-button {
     color: #888;
 }
 
+.media-button:active {
+    transform: scale(90%);
+}
+
 div.media-button:hover {
     background-color: #888;
     color: #151515;
@@ -135,7 +300,7 @@ div.media-button:hover {
 #play-pause-button {
     background-color: rgb(119, 88, 255);
     border-radius: 12px;
-    padding: 10px;
+    padding: 8px;
     color: white;
 }
 
@@ -166,11 +331,15 @@ div.media-button:hover {
     align-items: center;
     justify-content: center;
     text-align: center;
-    transition: background-color 0.1s, color 0.1s;
+    transition: background-color 0.1s, color 0.1s, transform 0.1s;
 }
 
 .other-function-button:hover {
     color: #888;
+}
+
+.other-function-button:active {
+    transform: scale(90%);
 }
 
 #volume-container {
@@ -193,4 +362,14 @@ div.media-button:hover {
     width: 50%;
     height: 100%;
     border-radius: 100px;
+}
+
+.hidden {
+    display: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .library-item {
+        font-size: 30px;
+    }
 }
