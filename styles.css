@@ -79,11 +79,12 @@ img {
     align-items: center;
     overflow-y: auto;
     max-height: calc(100vh - 150px);
+    padding-top: 6px;
 }
 
 #stupid-pillow {
     width: 98%;
-    height: 72px;
+    height: 70px;
     display: flex;
     margin-top: 6px;
     border-radius: 10px;
@@ -119,7 +120,7 @@ img {
     background: none;
     border-radius: 0;
     border-bottom: 1px solid #333;
-    margin-bottom: 8px;
+    margin-bottom: 0;
 }
 
 .song-list-item:hover {
