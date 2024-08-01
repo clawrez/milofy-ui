@@ -142,6 +142,7 @@ img {
     flex-direction: column;
     width: 350px;
     margin-left: 12px;
+    padding-right: 12px;
 }
 
 .song-list-artists {
