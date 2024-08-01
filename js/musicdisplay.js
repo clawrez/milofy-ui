@@ -52,5 +52,8 @@ function displayArtist(artist) {
             document.getElementById("song-list").appendChild(element)
 
         }
+        let pillow = _.createElement("div")
+        pillow.id = "stupid-pillow"
+        document.getElementById("song-list").appendChild(pillow)
     }
 }
